@@ -1,0 +1,136 @@
+{
+    "layer": "top",
+    "modules-left": [
+        "custom/launcher",
+        "tray",
+        "cpu",
+        "memory",
+        "temperature",
+        "network",
+        "custom/colorpicker"
+    ],
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
+    "modules-right": [
+        "backlight",
+        "wireplumber",
+        "clock",
+        "power-profiles-daemon",
+        "battery",
+        "custom/notification",
+        "custom/lock"
+    ],
+    "custom/launcher": {
+        "format": "",
+        "on-click": "rofi -show drun",
+        "on-click-right": "killall rofi"
+    },
+    "tray": {
+        "icon-size": 20,
+        "spacing": 20
+    },
+    "cpu": {
+        "interval": 10,
+        "format": "  {}%",
+        "max-length": 10
+    },
+    "memory": {
+        "interval": 10,
+        "format": "  {}%",
+        "max-length": 10
+    },
+    "temperature": {
+        "interval": 10,
+        "thermal-zone": 1,
+        "hwmon-path": "/sys/class/hwmon/hwmon7/temp1_input",
+        "critical-threshold": 80,
+        "format-critical": " {temperatureC}°C",
+        "format": " {temperatureC}°C"
+    },
+    "custom/colorpicker": {
+        "format": " ",
+        "on-click": "hyprpicker -a"
+    },
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "on-click": "activate",
+        "persistent-workspaces": {
+            "*": 5
+        },
+        "sort-by-number": true
+    },
+    "network": {
+        "tooltip": false,
+        "format-wifi": "  {essid}",
+        "format-ethernet": "󰈀 {essid}"
+    },
+    "backlight": {
+        "tooltip": false,
+        "format": " {}%",
+        "on-scroll-up": "brightnessctl set +5%",
+        "on-scroll-down": "brightnessctl set 5%-"
+    },
+    "wireplumber": {
+        "format": "{icon} {volume}%",
+        "format-muted": " Muted",
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "max-volume": 100,
+        "format-icons": [
+            " ",
+            " ",
+            " "
+        ]
+    },
+    "clock": {
+        "format": "{:%d %h %H:%M}",
+        "tooltip": false
+    },
+    "power-profiles-daemon": {
+        "format": " {profile}",
+        "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+        "tooltip": true
+    },
+    "battery": {
+        "states": {
+            "good": 90,
+            "warning": 15,
+            "critical": 5
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{icon} {time}",
+        "format-icons": [
+            " ",
+            " ",
+            " ",
+            " ",
+            " "
+        ]
+    },
+    "custom/notification": {
+        "tooltip": false,
+        "format": "{icon}",
+        "format-icons": {
+            "notification": " <span foreground='red'><sup></sup></span>",
+            "none": "",
+            "dnd-notification": " <span foreground='red'><sup></sup></span>",
+            "dnd-none": "",
+            "inhibited-notification": " <span foreground='red'><sup></sup></span>",
+            "inhibited-none": "",
+            "dnd-inhibited-notification": " <span foreground='red'><sup></sup></span>",
+            "dnd-inhibited-none": ""
+        },
+        "return-type": "json",
+        "exec-if": "which swaync-client",
+        "exec": "swaync-client -swb",
+        "on-click": "swaync-client -t -sw",
+        "on-click-right": "swaync-client -d -sw",
+        "escape": true
+    },
+    "custom/lock": {
+        "format": " ",
+        "on-click": "hyprlock"
+    }
+}

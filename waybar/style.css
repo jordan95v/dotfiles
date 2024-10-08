@@ -1,0 +1,128 @@
+@import "mocha.css";
+
+* {
+	font-family: JetBrainsMono Nerd Font;
+	font-size: 16px;
+	min-height: 0;
+}
+
+#waybar {
+	background: transparent;
+	color: @text;
+	margin: 5px;
+}
+
+#workspaces {
+	border-radius: 0.5rem;
+	margin: 5px 0px 5px 0px;
+	padding: 5px 0px 5px 0px;
+	background-color: @surface0;
+}
+
+#workspaces button {
+	color: @lavender;
+	border-radius: 1rem;
+	box-shadow: none;
+	text-shadow: none;
+	background: @surface0;
+	background-color: @surface0;
+	border: none;
+}
+
+#workspaces button.active {
+	color: @sky;
+}
+
+#workspaces button:hover {
+	color: @sapphire;
+}
+
+#custom-launcher,
+#tray,
+#cpu,
+#memory,
+#temperature,
+#network,
+#custom-colorpicker,
+#backlight,
+#wireplumber,
+#clock,
+#battery,
+#power-profiles-daemon,
+#custom-notification,
+#custom-lock,
+#custom-power {
+	background-color: @surface0;
+	padding: 0.5rem 1rem;
+	margin: 5px 0;
+}
+
+#custom-launcher {
+	margin-left: 1rem;
+	border-radius: 0.5rem 0px 0px 0.5rem;
+	color: @sapphire;
+}
+
+#cpu {
+	color: @rosewater;
+}
+
+#memory {
+	color: @mauve;
+}
+
+#temperature {
+	color: @green;
+}
+
+#temperature.critical {
+	color: @red;
+}
+
+#network {
+	color: @teal;
+}
+
+#custom-colorpicker {
+	color: @flamingo;
+	border-radius: 0px 0.5rem 0.5rem 0px;
+}
+
+#backlight {
+	color: @yellow;
+	border-radius: 0.5rem 0px 0px 0.5rem;
+}
+
+#wireplumber {
+	color: @maroon;
+}
+
+#clock {
+	color: @blue;
+}
+
+#battery {
+	color: @green;
+}
+
+#battery.charging {
+	color: @green;
+}
+
+#battery.warning:not(.charging) {
+	color: @red;
+}
+
+#power-profiles-daemon {
+	color: @pink;
+}
+
+#custom-notification {
+	color: @peach;
+}
+
+#custom-lock {
+	margin-right: 1rem;
+	border-radius: 0px 0.5rem 0.5rem 0px;
+	color: @lavender;
+}
