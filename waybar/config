@@ -50,7 +50,7 @@
     },
     "custom/colorpicker": {
         "format": " ",
-        "on-click": "hyprpicker -a"
+        "on-click": "hyprpicker -a | xargs -I{} notify-send 'Colorpicker' 'Color {} copied to clipboard.'"
     },
     "network": {
         "tooltip": false,
