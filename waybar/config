@@ -52,6 +52,11 @@
         "format": " ",
         "on-click": "hyprpicker -a"
     },
+    "network": {
+        "tooltip": false,
+        "format-wifi": "  {essid}",
+        "format-ethernet": "󰈀 {essid}"
+    },
     "hyprland/workspaces": {
         "format": "{icon}",
         "on-click": "activate",
@@ -59,11 +64,6 @@
             "*": 5
         },
         "sort-by-number": true
-    },
-    "network": {
-        "tooltip": false,
-        "format-wifi": "  {essid}",
-        "format-ethernet": "󰈀 {essid}"
     },
     "backlight": {
         "tooltip": false,

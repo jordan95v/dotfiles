@@ -5,7 +5,8 @@ all="󰹑  -> All outputs"
 all_clip="󰆏  -> Copy all outputs to clipboard"
 select="  -> Select region"
 select_clip="  -> Copy selected region to clipboard"
-input=$(printf "%s\n%s\n%s\n%s\n" "$all" "$all_clip" "$select" "$select_clip" | rofi -dmenu -p " 󰤨  Screenshot " -lines 4) || exit 1
+mesg="Utility to screenshot entire output or region of your screen. Choose one and press enter. The screenshot will then fire after one second, the time needed for the menu to close."
+input=$(printf "%s\n%s\n%s\n%s\n" "$all" "$all_clip" "$select" "$select_clip" | rofi -dmenu -p " 󰤨  Screenshot " -mesg "$mesg") || exit 1
 sleep 1 # to close rofi menu
 
 if [ "$input" = "$all" ]; then
