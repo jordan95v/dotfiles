@@ -6,7 +6,8 @@
 !swaync/*
 !rofi/
 !rofi/*
-!hypr/
+!rofi/scripts/*
+!rofi/themes/*
 !hypr/*
 !nwg-look/
 !nwg-look/*

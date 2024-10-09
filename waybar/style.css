@@ -109,8 +109,12 @@
 	color: @green;
 }
 
-#battery.warning:not(.charging) {
+#battery.critical {
 	color: @red;
+}
+
+#battery.warning:not(.charging) {
+	color: @flamingo;
 }
 
 #power-profiles-daemon {
