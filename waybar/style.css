@@ -8,8 +8,26 @@
 
 #waybar {
 	background: transparent;
+	opacity: 0.90;
 	color: @text;
 	margin: 5px;
+}
+
+#custom-launcher,
+#tray,
+#cpu,
+#memory,
+#temperature,
+#network,
+#backlight,
+#wireplumber,
+#clock,
+#battery,
+#power-profiles-daemon,
+#custom-notification {
+	background-color: @surface0;
+	padding: 0.5rem 1rem;
+	margin: 5px 0;
 }
 
 #workspaces {
@@ -37,26 +55,6 @@
 	color: @sapphire;
 }
 
-#custom-launcher,
-#tray,
-#cpu,
-#memory,
-#temperature,
-#network,
-#custom-colorpicker,
-#backlight,
-#wireplumber,
-#clock,
-#battery,
-#power-profiles-daemon,
-#custom-notification,
-#custom-lock,
-#custom-power {
-	background-color: @surface0;
-	padding: 0.5rem 1rem;
-	margin: 5px 0;
-}
-
 #custom-launcher {
 	margin-left: 1rem;
 	border-radius: 0.5rem 0px 0px 0.5rem;
@@ -81,10 +79,6 @@
 
 #network {
 	color: @teal;
-}
-
-#custom-colorpicker {
-	color: @flamingo;
 	border-radius: 0px 0.5rem 0.5rem 0px;
 }
 
@@ -123,10 +117,6 @@
 
 #custom-notification {
 	color: @peach;
-}
-
-#custom-lock {
 	margin-right: 1rem;
 	border-radius: 0px 0.5rem 0.5rem 0px;
-	color: @lavender;
 }

@@ -8,6 +8,7 @@
 !rofi/*
 !rofi/scripts/*
 !rofi/themes/*
+!hypr/
 !hypr/*
 !nwg-look/
 !nwg-look/*
