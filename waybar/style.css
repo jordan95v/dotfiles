@@ -8,7 +8,7 @@
 
 #waybar {
 	background: transparent;
-	opacity: 0.90;
+	opacity: 0.85;
 	color: @text;
 	margin: 5px;
 }
@@ -26,7 +26,7 @@
 #power-profiles-daemon,
 #custom-notification {
 	background-color: @surface0;
-	padding: 0.5rem 1rem;
+	padding: 0.5rem 0.75rem;
 	margin: 5px 0;
 }
 
@@ -56,6 +56,7 @@
 }
 
 #custom-launcher {
+	font-size: 20px;
 	margin-left: 1rem;
 	border-radius: 0.5rem 0px 0px 0.5rem;
 	color: @sapphire;

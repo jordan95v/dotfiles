@@ -12,7 +12,6 @@
         "hyprland/workspaces"
     ],
     "modules-right": [
-        "privacy",
         "backlight",
         "wireplumber",
         "clock",
