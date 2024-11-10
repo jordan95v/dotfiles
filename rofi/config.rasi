@@ -13,4 +13,4 @@ configuration{
     sidebar-mode: true;
 }
 
-@theme "/home/jordan/.config/rofi/themes/mocha.rasi"
+@theme "~/.config/rofi/themes/mocha.rasi"
